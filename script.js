@@ -529,21 +529,50 @@ window.addEventListener('load', () => {
     const birth = attr ? new Date(attr) : new Date(2018, 9, 20);
     const now = new Date();
     if (isNaN(birth.getTime())) { ageEl.textContent = '—'; return; }
-    let years = now.getFullYear() - birth.getFullYear();
-    let months = now.getMonth() - birth.getMonth();
-    if (months < 0 || (months === 0 && now.getDate() < birth.getDate())) {
-        years -= 1;
-        months += 12;
+    
+    // Проверяем, находимся ли мы в периоде с 20 сентября по 21 октября
+    const currentYear = now.getFullYear();
+    const sept20 = new Date(currentYear, 8, 20); // 8 = сентябрь (0-индексированный)
+    const oct21 = new Date(currentYear, 9, 21);  // 9 = октябрь
+    
+    let years, months, days;
+    
+    if (now >= sept20 && now <= oct21) {
+        // В специальном периоде - показываем точный возраст
+        years = now.getFullYear() - birth.getFullYear();
+        months = now.getMonth() - birth.getMonth();
+        days = now.getDate() - birth.getDate();
+        
+        if (days < 0) {
+            months -= 1;
+            const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+            days += lastMonth.getDate();
+        }
+        if (months < 0) {
+            years -= 1;
+            months += 12;
+        }
+    } else {
+        // Обычный расчет
+        years = now.getFullYear() - birth.getFullYear();
+        months = now.getMonth() - birth.getMonth();
+        if (months < 0 || (months === 0 && now.getDate() < birth.getDate())) {
+            years -= 1;
+            months += 12;
+        }
+        days = 0; // Не показываем дни вне специального периода
     }
-    const y = years;
-    const m = months;
+    
     function plural(n, forms){
         const n10 = n % 10, n100 = n % 100;
         if (n10 === 1 && n100 !== 11) return forms[0];
         if (n10 >= 2 && n10 <= 4 && (n100 < 10 || n100 >= 20)) return forms[1];
         return forms[2];
     }
-    let text = `${y} ${plural(y, ['год','года','лет'])}`;
-    if (m > 0) { text += ` ${m} ${plural(m, ['месяц','месяца','месяцев'])}`; }
+    
+    let text = `${years} ${plural(years, ['год','года','лет'])}`;
+    if (months > 0) { text += ` ${months} ${plural(months, ['месяц','месяца','месяцев'])}`; }
+    if (days > 0) { text += ` ${days} ${plural(days, ['день','дня','дней'])}`; }
+    
     ageEl.textContent = text;
 })(); 
