@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кот Нильсон - Vladislav12.03</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="IMG_7332.jpeg" alt="Vladislav12.03" class="avatar">
+                <span class="logo-stack"><span class="logo-text">Vladislav12.03</span><span class="logo-sub">.vkcorp.eu.org</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                <li><a href="tech.html" class="nav-link">Техника</a></li>
+                <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                <li><a href="cat.html" class="nav-link active">Кот Нильсон</a></li>
+                <li><a href="lifestyle.html" class="nav-link">Стиль жизни</a></li>
+                <li><a href="socials.html" class="nav-link">Соцсети</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-avatar">
+                    <img src="IMG_3255.jpeg" alt="Кот Нильсон" class="page-avatar">
+                </div>
+                <div class="header-text">
+                    <h1 class="page-title">Кот Нильсон 🐱</h1>
+                    <p class="page-subtitle">Мой верный компаньон и главный критик кода</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основная информация о коте -->
+    <section class="cat-main">
+        <div class="container">
+            <div class="cat-content">
+                <div class="cat-image">
+                    <img src="IMG_3255.jpeg" alt="Кот Нильсон" class="cat-photo">
+                </div>
+                <div class="cat-info">
+                    <h2 class="cat-name">Нильсон</h2>
+                    <p class="cat-description">
+                        Мой верный компаньон и главный критик кода. Всегда рядом, когда я работаю, 
+                        и иногда помогает нажимать на клавиши (особенно Delete).
+                    </p>
+                    <div class="cat-stats">
+                        <div class="cat-stat">
+                            <span class="stat-label">Возраст:</span>
+                            <span class="stat-value" id="cat-age" data-birth="2018-10-20">—</span>
+                        </div>
+                        <div class="cat-stat">
+                            <span class="stat-label">Порода:</span>
+                            <span class="stat-value">Скоттиш страйт</span>
+                        </div>
+                        <div class="cat-stat">
+                            <span class="stat-label">Вес:</span>
+                            <span class="stat-value">9.8 кг</span>
+                        </div>
+                        <div class="cat-stat">
+                            <span class="stat-label">Любимая еда:</span>
+                            <span class="stat-value">Паштет с лососем</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Забавные факты -->
+    <section class="cat-facts">
+        <div class="container">
+            <h2 class="section-title">Забавные факты о Нильсоне</h2>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>🐾</span>
+                    </div>
+                    <h3>Любит сидеть на клавиатуре</h3>
+                    <p>Особенно когда я пытаюсь писать код. Говорит, что это его способ помочь с программированием</p>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>😴</span>
+                    </div>
+                    <h3>Спит 18 часов в сутки</h3>
+                    <p>Но всегда просыпается, когда слышит звук открывающегося холодильника</p>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>🎯</span>
+                    </div>
+                    <h3>Точность попадания в цель: 100%</h3>
+                    <p>Может сбить любой предмет с полки одним движением хвоста</p>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>💻</span>
+                    </div>
+                    <h3>Любит смотреть на экран</h3>
+                    <p>Особенно когда там движутся объекты или я играю в игры</p>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>🎵</span>
+                    </div>
+                    <h3>Реагирует на музыку</h3>
+                    <p>Любит Lo-Fi и успокаивающие мелодии, под которые я программирую</p>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>🌙</span>
+                    </div>
+                    <h3>Ночной образ жизни</h3>
+                    <p>Самый активный становится в 3 часа ночи, когда я обычно заканчиваю кодить</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Дневник кота -->
+    <section class="cat-diary">
+        <div class="container">
+            <h2 class="section-title">Дневник Нильсона</h2>
+            <div class="diary-entries">
+                <div class="diary-entry">
+                    <div class="entry-date">Сегодня</div>
+                    <div class="entry-content">
+                        <h3>Утро</h3>
+                        <p>Разбудил Влада в 6 утра, потому что хотел есть. Он был недоволен, но покормил меня. 
+                        Потом сел на его ноутбук, пока он готовил завтрак. Клавиши такие приятные на лапки!</p>
+                    </div>
+                </div>
+                
+                <div class="diary-entry">
+                    <div class="entry-date">Вчера</div>
+                    <div class="entry-content">
+                        <h3>День</h3>
+                        <p>Влад весь день программировал. Я помогал ему, сидя рядом и иногда нажимая на Delete. 
+                        Он говорит, что я "помогаю" ему писать код заново. Не понимаю, в чём проблема!</p>
+                    </div>
+                </div>
+                
+                <div class="diary-entry">
+                    <div class="entry-date">Позавчера</div>
+                    <div class="entry-content">
+                        <h3>Вечер</h3>
+                        <p>Влад пытался отладить код, а я отлаживал его настроение, принося игрушки. 
+                        В итоге мы оба устали и легли спать. Я на его подушке, он на краю кровати.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кот в программировании -->
+    <section class="cat-programming">
+        <div class="container">
+            <h2 class="section-title">Нильсон в программировании</h2>
+            <div class="programming-grid">
+                <div class="programming-item">
+                    <h3>Любимые команды терминала</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>cat</code>
+                            <span>Потому что он кот! 🐱</span>
+                        </div>
+                        <div class="command-item">
+                            <code>tail</code>
+                            <span>Любит хвосты</span>
+                        </div>
+                        <div class="command-item">
+                            <code>sleep</code>
+                            <span>Его любимая команда</span>
+                        </div>
+                        <div class="command-item">
+                            <code>purr</code>
+                            <span>Мурлыкание (не существует, но должно!)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="programming-item">
+                    <h3>Код, который он "написал"</h3>
+                    <div class="cat-code">
+                        <pre><code>// Код Нильсона
+function catLife() {
+    while (true) {
+        if (hungry) {
+            meow();
+            wakeUpHuman();
+        }
+        if (tired) {
+            sleep();
+        }
+        if (bored) {
+            knockThingsOff();
+        }
+        if (humanCoding) {
+            sitOnKeyboard();
+        }
+    }
+}
+
+// Комментарий Нильсона: Мяу!</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фотогалерея -->
+    <section class="cat-gallery">
+        <div class="container">
+            <h2 class="section-title">Фотогалерея Нильсона</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ff88?text=Спит" alt="Нильсон спит">
+                    <div class="gallery-caption">Сладкий сон после тяжёлого дня</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="IMG_3325.jpeg" alt="Нильсон помогает с кодом">
+                    <div class="gallery-caption">Помогает с программированием</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ff88?text=Играет" alt="Нильсон играет">
+                    <div class="gallery-caption">Играет с игрушками</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ff88?text=Смотрит+в+окно" alt="Нильсон смотрит в окно">
+                    <div class="gallery-caption">Наблюдает за птицами</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ff88?text=Кушает" alt="Нильсон кушает">
+                    <div class="gallery-caption">Время обеда</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ff88?text=Мурлычет" alt="Нильсон мурлычет">
+                    <div class="gallery-caption">Доволен жизнью</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Планы на будущее -->
+    <section class="cat-future">
+        <div class="container">
+            <h2 class="section-title">Планы Нильсона на будущее</h2>
+            <div class="cat-plans-grid">
+                <div class="cat-plan-item">
+                    <div class="plan-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Изучить Python</h3>
+                    <p>Хочет стать первым котом-программистом в мире</p>
+                </div>
+                
+                <div class="cat-plan-item">
+                    <div class="plan-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Создать игру</h3>
+                    <p>Игра "Поймай мышь" на JavaScript</p>
+                </div>
+                
+                <div class="cat-plan-item">
+                    <div class="plan-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI ассистент</h3>
+                    <p>Хочет создать бота, который будет мурлыкать</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="IMG_7332.jpeg" alt="Vladislav12.03" class="footer-avatar">
+                    <span class="footer-text">Vladislav12.03</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">Обо мне</a>
+                    <a href="socials.html">Соцсети</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Vladislav12.03. Создано с ❤️ и ☕</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
