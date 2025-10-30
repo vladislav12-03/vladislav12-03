@@ -1746,10 +1746,13 @@ html {
 .link-card.full { margin-bottom: 1rem; }
 .link-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px var(--shadow-color); border-color: var(--primary-color); }
 .link-left { display: flex; align-items: center; gap: 1rem; }
+/* allow text to shrink inside flex to avoid overflow */
+.link-texts { min-width: 0; }
 .brand-icon { width: 28px; height: 28px; filter: invert(78%) sepia(46%) saturate(478%) hue-rotate(94deg) brightness(105%) contrast(101%); }
 .brand-fallback { width: 28px; height: 28px; display: grid; place-items: center; color: var(--primary-color); }
 .link-title { color: var(--text-primary); font-weight: 600; }
-.link-sub { color: var(--text-secondary); font-size: .9rem; }
+/* truncate long URLs with ellipsis */
+.link-sub { color: var(--text-secondary); font-size: .9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
 .link-go { color: var(--text-secondary); }
 .link-go:hover { color: var(--primary-color); }
 
@@ -1860,4 +1863,24 @@ html {
     object-fit: cover;
     object-position: left center;
     border-radius: 8px;
+} 
+
+/* Sizing guards for social link cards to prevent horizontal overflow */
+.link-card, .link-card.full { width: 100%; min-width: 0; overflow: hidden; }
+
+@media (max-width: 480px) {
+	/* Force single column and safe sizing for very small screens */
+	.link-row { grid-template-columns: 1fr; }
+	/* Tighter social cards on mobile: cut long URLs and pin arrow */
+	.link-sub { max-width: 65%; font-size: .85rem; }
+	.link-go { flex: 0 0 auto; }
+} 
+
+/* Remove persistent tap highlight and focus glow on mobile for cards/links */
+a, .btn, .link-card { -webkit-tap-highlight-color: transparent; }
+.link-card:focus, .link-card:focus-visible, .link-card:active,
+.btn:focus, .btn:focus-visible, .btn:active,
+.link-go:focus, .link-go:focus-visible, .link-go:active {
+	outline: 0;
+	box-shadow: none;
 } 
